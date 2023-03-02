@@ -1,0 +1,6 @@
+# promise
+```
+    class myPromise {
+        
+    }
+```
