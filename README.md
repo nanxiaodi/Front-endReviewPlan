@@ -1,5 +1,6 @@
 # js
 - [原型链]()
+- [promise](./blog/js/promise.md)
 # [vue3](https://cn.vuejs.org/guide/introduction.html)
 
 - setup
