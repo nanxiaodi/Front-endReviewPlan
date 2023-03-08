@@ -7,4 +7,4 @@
 - setTimeout、setInterval、setImmediate(node环境下)、I/O
 
 ### micro task(微任务)
-- promise、Process.nextTick(node环境)、MutationObserver
+- queenMicrotask、promise、Process.nextTick(node环境)、MutationObserver
