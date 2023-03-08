@@ -70,19 +70,33 @@ function resolvePromise(promise, x, resolve, reject) {
 }
 
 // test code
-let promise1 = new myPromise((resolve, reject) => {
-    console.log(1)
-    setTimeout(() => {
-        resolve(2)
-    }, 2000)
+// let promise1 = new myPromise((resolve, reject) => {
+//     console.log(1)
+//     setTimeout(() => {
+//         resolve(2)
+//     }, 2000)
 
+// })
+
+
+// console.log(3)
+// promise1.then(res => {
+//     console.log(res)
+//    return 4
+// }).then(res => {
+//     console.log(res)
+// })
+
+let promise2 = new myPromise((resolve, reject) => {
+    console.log(1)
+    reject()
+    console.log(2)
+    resolve()
+    console.log(3)
 })
 
-
-console.log(3)
-promise1.then(res => {
-    console.log(res)
-   return 4
-}).then(res => {
-    console.log(res)
+promise2.then(() => {
+    console.log(4)
+}).then(() => {
+    console.log(5)
 })
