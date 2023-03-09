@@ -1,5 +1,5 @@
 # 静态提升（优化diff算法）
-- 静态提升就是把永远不会变化的静态节点提出render函数之外，这些静态节点可以调用createElementVNode函数，并用/*#__PURE__*/做个标记，以_hoists_命名的变量，再放入render函数之中，并且diff算法读到这些标记，不会用diff算法来对比，节省了diff的时间复杂度
+- 静态提升就是把永远不会变化的静态节点提出render函数之外，这些静态节点可以调用createElementVNode函数，并用/*#__PURE__*/做个标记，以_hoists_命名的变量，再放入render函数之中，并且diff算法会用到patchflag标记动态元素，可以快速定位需要更新的位置
 
 
 ```
@@ -31,7 +31,7 @@
 	<div>{{ dynamic }}</div>
 </div>
 
-// 形成之后
+// 编译之后
 import { createElementVNode as _createElementVNode, createCommentVNode as _createCommentVNode, openBlock as _openBlock, createElementBlock as _createElementBlock, normalizeClass as _normalizeClass, toDisplayString as _toDisplayString } from "vue"
 
 const _hoisted_1 = /*#__PURE__*/_createElementVNode("div", null, "foo", -1 /* HOISTED */)
