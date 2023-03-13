@@ -1,5 +1,5 @@
 # js
-- [原型链]()
+- [原型链](./blog/js/原型链.md)
 - [promise](./blog/js/promise.md)
 - [防抖与节流](./blog/js/%E9%98%B2%E6%8A%96%E4%B8%8E%E8%8A%82%E6%B5%81.md)
 # [vue3](https://cn.vuejs.org/guide/introduction.html)
