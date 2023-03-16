@@ -8,7 +8,7 @@
 其中又只有 "aa" 可以执行重复项删除操作，所以最后的字符串为 "ca"。
 */
 
-const word = "abbaca"
+// const word = "abbaca"
 
 // var removeDuplicates = function (s) {
 //     let stack = [];
@@ -55,14 +55,36 @@ const word = "abbaca"
 // console.log(isUniqueArr(arr))
 
 // 判断数组最大值
-function arrMax(arr) {
-    let isUniqueArr = false
-    for (let i = 0; i < arr.length; i++) {
-        var newArr = arr.slice(i+1,-1)
-        if (newArr.indexOf(arr[i]) > -1) {
-            return isUniqueArr = true
+// function arrMax(arr) {
+//     let isUniqueArr = false
+//     for (let i = 0; i < arr.length; i++) {
+//         var newArr = arr.slice(i+1,-1)
+//         if (newArr.indexOf(arr[i]) > -1) {
+//             return isUniqueArr = true
+//         }
+//     }
+ 
+//     return false
+// }
+
+
+// 数组排序
+// ---------冒泡排序
+function bubbleSort(arr) {
+    let newArr = []
+    for(let i = 0; i<arr.length-1; i++) {
+        for(let j=0; j<arr.length-1; j++) {
+            if(arr[j] > arr[j+1]) {
+                // newArr.push(arr[i])
+                let temp = arr[j]
+                arr[j] = arr[j+1]
+                arr[j+1] = temp
+            }
         }
     }
- 
-    return false
+    return arr
 }
+
+var a =  [3, 1, 2, 5, 4, 8, 9, 7, 6]
+console.log(bubbleSort(a))
+
